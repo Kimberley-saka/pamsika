@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'pamsika.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'PGPASSWORD',
+        'NAME': 'pamsika',
+        'USER': 'kimberley',
+        'PASSWORD': '',
         'HOST': 'roundhouse.proxy.rlwy.net',
         'PORT': '57993',
     }

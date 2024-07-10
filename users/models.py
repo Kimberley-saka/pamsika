@@ -8,8 +8,12 @@ from django.contrib.auth.models import AbstractUser
 
 class Users(AbstractUser):
     password = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+
 
     USERNAME_FIELD = 'email'
+
+    REQUIRED_FIELDS = ['firstname', 'lastname']
 
 
     def __str__(self):
@@ -23,11 +27,10 @@ class Users(AbstractUser):
         "Does the user have permissions to view the app `app_label`?"
     
         return True
-
+    
     @property
     def is_staff(self):
         "Is the user a member of staff?"
-   
         return self.is_admin
 
 
